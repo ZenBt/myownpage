@@ -1,0 +1,14 @@
+{% extends 'portfolio/projects.html' %}
+{% block second_title %}
+<span>Поиск по тегу <strong>{{tag}}</strong></span>
+{% endblock second_title %}
+
+{% block article %}
+{% if object_list %}
+    {{block.super}}
+{% else %}
+<h2 class="text-center mt-1 pr">
+    <span>Проектов с таким тегом не найдено =(</span>
+</h2>
+{% endif %}
+{% endblock article %}

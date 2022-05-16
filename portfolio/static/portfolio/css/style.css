@@ -1,0 +1,113 @@
+h1 {
+    letter-spacing: 0.02em;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+h2,h3 {
+    letter-spacing: 0.07em;
+    line-height: 1.4em;
+    color: #333333;
+    font-size: 27px;
+    font-family: sans-serif;
+}
+
+h5.card-title {
+    letter-spacing: 0.05em;
+    font-size: 22px;
+    color: #333333;
+    font-family: sans-serif;
+}
+
+h2.pr, .card-body p, p.about {
+    letter-spacing: 0.05em;
+    line-height: 1.9em;
+    color: #333333;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+p.tags, a p, a.tags {
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #333333;
+}
+a.tags {
+    color: #a0138e;
+    font-weight: bold;
+}
+a.tags:hover {
+    color: #333333;
+}
+
+li.nav-item:hover a p  {
+    color: #0057e1 !important;
+    transition: .1s !important;
+}
+
+p.footer span {
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    font-family: sans-serif;
+    color: #333333;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #a0a0a0 !important;
+}
+.border-top {
+    border-top: 3px solid #a0138e !important;
+}
+
+p {
+    font-family: sans-serif;
+    text-align: justify;
+}
+
+p.about {
+    font-size: 28px;
+    line-height: 40px !important;
+}
+
+div.about-img {
+    float:right;
+    width:55%;
+    padding-left: 15%;
+}
+
+img.about-img {
+    border: #333333 1px solid;
+    float: right; 
+    max-width: 100%;
+    height: auto;
+}
+
+div.about {
+    float:none;
+}
+
+ul.crd li {
+    display: inline;
+}
+
+img.article_logo {
+    margin: auto;
+}
+
+button.git {
+    margin-right: 0;
+    
+}
+
+.fixed-content {
+    top: 50%;
+    right: 0;
+    position:fixed;
+    overflow-y:scroll;
+    overflow-x:hidden;
+}

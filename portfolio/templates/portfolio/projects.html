@@ -1,0 +1,36 @@
+{% extends 'portfolio/index.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+  <div class="row mt-5 mb-3 py-3">
+
+    <h1 class="text-center mt-1">
+      <span>Проекты</span>
+    </h1>
+  </div>
+  <div class="row my-3">
+    <h2 class="text-center mt-1 pr">
+      {% block second_title %}
+      <span>Я занимаюсь этим уже столько. Вот столько прямо.</span>
+      {% endblock second_title%}
+    </h1>
+  </div>
+
+  <div class="row mb-5" id="projects"> {% block article %}
+    {%for article in object_list %}
+    <div class="col-md-6 col-xl-4">
+     
+      <div class="card mx-auto border-0" style="width: 80%;">
+        <img class="card-img-top" src="{{MEDIA_URL}}{{article.icon.url}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title text-center">{{article.title}}</h5>
+          <p class="card-text text-center">{{article.description}}</p>
+          <div class="text-center">
+            <a href="{% url 'article' article.pk %}">
+              <button type="button" class="btn btn-outline-dark">Ознакомиться</button></a>
+          </div></div></div></div>
+          {% endfor %}
+    {% endblock article %}
+  </div>
+  <div class="row border-bottom mb-4"></div>
+  {% endblock content %}

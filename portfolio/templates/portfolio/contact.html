@@ -1,0 +1,131 @@
+{% extends 'portfolio/index.html' %}
+    {% block content %}
+    <div class="container">
+        <div class="row mt-5 mb-3 py-3">
+
+            <h1 class="text-center mt-1">
+                <span>Контакты</span>
+            </h1>
+        </div>
+
+        <div class="row my-3 text-center">
+            <div class="col-md-3"></div>
+
+            <div class="col-md-2">
+                <p class="tags"> Адрес</p>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-2">
+                <p class="tags ">Email</p>
+            </div>
+            <div class="col-md-2">
+                <p class="tags">Telegram</p>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <div class="row my-3 pb-4">
+            <div class="col-md-3"></div>
+
+            <div class="col-md-2">
+                <p class="tags"> Краснодарский край</p>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-2">
+                <p class="tags">zenbee111@gmail.com</p>
+            </div>
+            <div class="col-md-2">
+                <p class="tags">@Zen_B</p>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <div class="row mt-5 mb-3">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <h5 class="card-title">Вы также можете использовать форму ниже</h5>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+
+        
+        <form method="post">
+            {% csrf_token %}
+            <div class="row mb-0">
+                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                    <p class="tags ">Имя</p>
+                </div>
+                <div class="col-md-3">
+                    <p class="tags ">Фамилия</p>
+                </div>
+                <div class="col-md-3"></div>
+                
+            </div>
+
+        <div class="row mb-3 mt-0">
+            <div class="col-md-3"></div>
+            <div class="col-md-3">
+                {{ form.name }}
+            </div>
+            <div class="col-md-3">
+                {{ form.surname }}
+            </div>
+            <div class="col-md-3"></div>
+            
+        </div>
+
+
+        <div class="row mt-3 mb-0">
+            <div class="col-md-3"></div>
+            <div class="col-md-3">
+                <p class="tags ">Email*</p>
+            </div>
+            <div class="col-md-3">
+                <p class="tags ">Тема*</p>
+            </div>
+            <div class="col-md-3"></div>
+            
+        </div>
+
+        <div class="row mb-3 mt-0">
+            <div class="col-md-3"></div>
+            <div class="col-md-3">
+                {{ form.email }}
+            </div>
+            <div class="col-md-3">
+                {{ form.topic }}
+            </div>
+            <div class="col-md-3"></div>
+            
+        </div>
+
+
+        <div class="row mt-4">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+               <p class="tags">Подробнейше опишите Ваш вопрос..</p>
+                {{ form.content }}
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-5"></div>
+            <div class="col-md-2 my-2">
+                
+                    <button type="submit" class="btn btn-outline-dark">Отправить</button>
+                  </div>
+            </div>
+            <div class="col-md-5"></div>
+    </form>
+    </div>
+
+    
+
+
+    <div class="container">
+        <div class="row mt-5 mb-4">
+            <div class="col-9 m-auto border-bottom pb-3">
+            </div>
+        </div>
+{% endblock content %}

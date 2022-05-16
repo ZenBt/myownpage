@@ -1,0 +1,51 @@
+{% extends 'portfolio/index.html' %}
+    {% block content %}
+  <div class="container">
+    <div class="row mt-1 mb-3">
+      <div class="col-12 text-center">
+        {% if article.header_pic %}
+        <img src="{{MEDIA_URL}}{{article.header_pic.url}}" class="img-fluid" alt="">
+        {% endif %}
+      </div>
+    </div>
+   
+
+      <div class="row my-3 text-center">
+        <div class="col-md-1"></div>
+        <div class="col-md-5 pr-5">
+          <h1>{{article.title}}</h1>
+        </div>
+        <div class="col-md-5 my-auto">
+          <div class="text-center">
+            <a href="{{article.git_url}}">
+            <button type="button" class="btn btn-outline-dark git">Страница проекта на GitHub <strong>></strong></button></a>
+          </div></div>
+          <div class="col-md-1"></div>
+        </div>
+
+        <div class="row mt-3 mb-5">
+          <div class="col-md-2" style="padding:0"></div>
+          <div class="col-md-10" style="padding:0" ><p class="tags">Используемые технологии: 
+            {% for tag in tags  %}
+            <a href="{% url 'tags' tag=tag %}" class="tags">{{tag.tag}} </a>
+          {% endfor%}
+          </p> </div>
+        </div>
+    
+        <div class="row mt-3 mb-2">
+          <div class="col-md-2" style="padding:0"></div>
+          <div class="col-md-8 article-content border-bottom" style="padding:0; padding-bottom: 1em;" >
+            <h3>Описание</h3>
+            <p>{{article.content}}</p>
+        {% if article.review_url %}
+        <div class="text-center">
+          <a href="{{article.review_url}}">
+          <button type="button" class="btn btn-outline-dark git">Демо-версия проекта <strong>></strong></button></a>
+        </div></div>
+        {%endif %}
+          </div></div>
+        
+
+
+    </div>
+{% endblock content %}

@@ -1,0 +1,45 @@
+{% extends 'portfolio/index.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="row mt-5 mb-3 py-3">
+
+        <h1 class="text-center mt-1">
+            <span>Обо мне</span>
+        </h1>
+    </div>
+    <div class="row mt-5 mb-3 py-3 border-bottom">
+
+        <div class="col-md-12">
+            <div style="width:100%;">
+                <div class="about-img">
+                    <img class="about-img" src="{% static 'portfolio/img/me.jpg'%}" alt="">
+                </div>
+                <div class="about">
+                    <h2 style="font-size:40px;"><strong>Если кратко, то я..</strong></h2>
+                    <p class="about">Студент третьего (почти 4-го) курса математического факультета филиала КубГУ.</p>
+                    <p class="about"> Wannabe-джун и фанат питона. Осмысленно стал кодить с середины второго курса.</p>
+                    <h2 style="font-size:40px; margin-top:7%;"><strong>Текущий стек..</strong></h2>
+                    <p class="about">Python, SQL, (JS - на уровне чтения кода и написания простых ajax запросов на
+                        JQuery)</p>
+                    <p class="about">Django, Djago Rest Framework, Django ORM</p>
+                    <p class="about">Flask, SQLAlchemy, WTForms, Flask-login</p>
+                    <p class="about">MySQL, PostgreSQL, MongoDB</p>
+                    <p class="about">Apache2.4, mod_wsgi, Nginx, Gunicorn</p>
+                    <p class="about">HTML, CSS и Bootstrap знаю на том уровне, на котором сверстан этот сайт.</p>
+
+                    <img src="{% static 'portfolio/img/mta.jpg' %}"
+                        style="float:left; width:60%; padding:0; margin-right: 5%; margin-top:5%; border:1px solid #333333;"
+                        alt="">
+                    <h2 style="font-size:40px; margin-top:7%;"><strong>Сертификации..</strong></h2>
+                    <p class="about">Из особо важного - Microsoft Techology Association 98-381. Сертификационный экзамен проводился
+                        полностью на английском языке, было набрано 92 балла из 100 возможных. </p>
+                    <p class="about">Есть и другие сертификаты, но они слишком незначительны.</p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+        {% endblock content %}
