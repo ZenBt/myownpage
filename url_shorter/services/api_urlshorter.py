@@ -35,4 +35,4 @@ def get_redirect_url(url):
     url = get_full_link(url)
     if url:
         return url.initial_url
-    return BASE_SHORTER_URL
+    return f'http://{BASE_SHORTER_URL}'
