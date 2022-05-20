@@ -23,7 +23,7 @@ def shortify(url: str) -> str:
             add_to_db(short_url=short_url, url=url)
             return short_url
 
-def get_full_link(short_url: str) -> Union[str, None]:
+def get_full_link(short_url: str) -> Union[ShortUrl, None]:
     return ShortUrl.objects.filter(short_url=short_url).first()
 
 
